@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ashish Singh Rawat | Frontend Developer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            background: #e9edf2;
+            color: #303846;
+            line-height: 1.4;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           A4 RESUME
+        ========================= */
+
+        .resume {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 25px auto;
+            background: #ffffff;
+
+            display: grid;
+            grid-template-columns: 64mm 1fr;
+
+            overflow: hidden;
+
+            border-radius: 0 32px 32px 0;
+
+            box-shadow:
+                0 18px 50px rgba(27, 38, 54, 0.14);
+        }
+
+
+        /* =========================
+           SIDEBAR
+        ========================= */
+
+        .sidebar {
+            background: #303b4f;
+            color: #ffffff;
+
+            padding: 30px 22px;
+
+            min-height: 297mm;
+        }
+
+
+        /* =========================
+           PROFILE IMAGE
+        ========================= */
+
+        .profile {
+            display: flex;
+            justify-content: center;
+
+            margin-bottom: 28px;
+        }
+
+        .profile img {
+            width: 112px;
+            height: 112px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border: 5px solid rgba(255, 255, 255, 0.9);
+
+            box-shadow:
+                0 5px 18px rgba(0, 0, 0, 0.18);
+        }
+
+
+        /* =========================
+           SIDEBAR SECTIONS
+        ========================= */
+
+        .sidebar-section {
+            margin-bottom: 26px;
+        }
+
+        .sidebar-title {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            color: #ffffff;
+
+            margin-bottom: 9px;
+            padding-bottom: 7px;
+
+            border-bottom:
+                1px solid rgba(255, 255, 255, 0.5);
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 8px;
+
+            margin-bottom: 9px;
+
+            font-size: 8.4px;
+
+            line-height: 1.45;
+
+            color: #eef1f5;
+
+            word-break: break-word;
+        }
+
+        .contact-icon {
+            width: 13px;
+            min-width: 13px;
+
+            text-align: center;
+
+            font-size: 9px;
+
+            color: #ffffff;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+
+        .education {
+            margin-bottom: 14px;
+        }
+
+        .education strong {
+            display: block;
+
+            font-size: 8.8px;
+
+            color: #ffffff;
+
+            margin-bottom: 2px;
+        }
+
+        .education span {
+            display: block;
+
+            font-size: 8px;
+
+            color: #d9dee6;
+
+            line-height: 1.4;
+        }
+
+        .education .date {
+            color: #ffffff;
+
+            margin-top: 2px;
+        }
+
+
+        /* =========================
+           SIDEBAR LIST
+        ========================= */
+
+        .sidebar-list {
+            padding-left: 15px;
+        }
+
+        .sidebar-list li {
+            font-size: 8.3px;
+
+            color: #e7ebf0;
+
+            margin-bottom: 6px;
+        }
+
+
+        /* =========================
+           MAIN CONTENT
+        ========================= */
+
+        .main {
+            padding: 32px 28px 26px 28px;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .header {
+            margin-bottom: 23px;
+        }
+
+        .name {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 30px;
+
+            line-height: 1.05;
+
+            letter-spacing: 0.4px;
+
+            color: #303b4f;
+
+            font-weight: 700;
+        }
+
+        .designation {
+            margin-top: 7px;
+
+            font-size: 10.5px;
+
+            letter-spacing: 2px;
+
+            color: #5c6675;
+
+            font-weight: 600;
+
+            text-transform: uppercase;
+        }
+
+        .location {
+            margin-top: 6px;
+
+            font-size: 8.2px;
+
+            color: #697384;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: Georgia, "Times New Roman", serif;
+
+            font-size: 14px;
+
+            color: #303b4f;
+
+            font-weight: 700;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: "";
+
+            height: 1px;
+
+            background: #737b87;
+
+            flex: 1;
+        }
+
+
+        /* =========================
+           SUMMARY
+        ========================= */
+
+        .summary {
+            font-size: 8.3px;
+
+            line-height: 1.55;
+
+            color: #464e5a;
+
+            text-align: justify;
+        }
+
+
+        /* =========================
+           EXPERIENCE TIMELINE
+        ========================= */
+
+        .timeline {
+            position: relative;
+
+            margin-left: 4px;
+
+            padding-left: 17px;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 3px;
+
+            top: 4px;
+
+            bottom: 4px;
+
+            width: 1px;
+
+            background: #858c96;
+        }
+
+        .experience {
+            position: relative;
+
+            margin-bottom: 18px;
+        }
+
+        .experience:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience::before {
+            content: "";
+
+            position: absolute;
+
+            width: 7px;
+            height: 7px;
+
+            background: #ffffff;
+
+            border: 2px solid #68717d;
+
+            border-radius: 50%;
+
+            left: -19px;
+
+            top: 3px;
+        }
+
+        .experience-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: flex-start;
+
+            gap: 10px;
+        }
+
+        .job-title {
+            font-size: 10px;
+
+            font-weight: 700;
+
+            color: #303b4f;
+        }
+
+        .company {
+            font-size: 8.5px;
+
+            color: #626c7b;
+
+            margin-top: 1px;
+        }
+
+        .date {
+            font-size: 8px;
+
+            color: #657080;
+
+            white-space: nowrap;
+        }
+
+        .experience ul {
+            margin-top: 5px;
+
+            padding-left: 14px;
+        }
+
+        .experience li {
+            font-size: 7.8px;
+
+            line-height: 1.45;
+
+            color: #414954;
+
+            margin-bottom: 3px;
+        }
+
+
+        /* =========================
+           TECHNICAL SKILLS
+        ========================= */
+
+        .skills {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 7px 14px;
+        }
+
+        .skill {
+            padding: 7px 8px;
+
+            background: #f5f6f8;
+
+            border-left: 3px solid #303b4f;
+
+            border-radius: 2px;
+        }
+
+        .skill strong {
+            display: block;
+
+            font-size: 8px;
+
+            color: #303b4f;
+
+            margin-bottom: 2px;
+        }
+
+        .skill span {
+            font-size: 7.8px;
+
+            color: #555e6b;
+
+            line-height: 1.4;
+        }
+
+
+        /* =========================
+           CERTIFICATIONS
+        ========================= */
+
+        .certifications {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+        }
+
+        .certificate {
+            padding-left: 9px;
+
+            border-left: 3px solid #303b4f;
+        }
+
+        .certificate-title {
+            font-size: 8.2px;
+
+            font-weight: 700;
+
+            color: #303b4f;
+        }
+
+        .certificate-source {
+            font-size: 7.6px;
+
+            color: #697384;
+
+            margin-top: 2px;
+        }
+
+
+        /* =========================
+           ONLINE PROFILES
+        ========================= */
+
+        .profiles {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 7px 12px;
+        }
+
+        .profile-link {
+            font-size: 7.7px;
+
+            color: #535c68;
+
+            word-break: break-all;
+        }
+
+        .profile-link strong {
+            color: #303b4f;
+        }
+
+
+        /* =========================
+           PRINT
+        ========================= */
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+
+            html,
+            body {
+                width: 210mm;
+                height: 297mm;
+
+                margin: 0;
+                padding: 0;
+
+                background: #ffffff;
+            }
+
+            .resume {
+                width: 210mm;
+                min-height: 297mm;
+
+                margin: 0;
+
+                box-shadow: none;
+
+                border-radius: 0;
+            }
+
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media screen and (max-width: 850px) {
+
+            body {
+                padding: 10px;
+            }
+
+            .resume {
+                width: 100%;
+
+                grid-template-columns: 210px 1fr;
+
+                margin: 0;
+            }
+        }
+
+
+        @media screen and (max-width: 650px) {
+
+            body {
+                padding: 0;
+            }
+
+            .resume {
+                display: block;
+
+                border-radius: 0;
+            }
+
+            .sidebar {
+                min-height: auto;
+            }
+
+            .skills,
+            .certifications,
+            .profiles {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-top {
+                display: block;
+            }
+
+            .date {
+                margin-top: 2px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="resume">
+
+
+        <!-- =====================================================
+         LEFT SIDEBAR
+    ====================================================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- PROFILE PHOTO -->
+
+            <div class="profile">
+
+                <img src="ashish.png" alt="Ashish Singh Rawat">
+
+            </div>
+
+
+            <!-- CONTACT -->
+
+            <section class="sidebar-section">
+
+                <h2 class="sidebar-title">
+                    Contact
+                </h2>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">☎</span>
+
+                    <span>
+                        +971 56 769 6582
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">@</span>
+
+                    <span>
+                        ashishrawat008575@gmail.com
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">●</span>
+
+                    <span>
+                        Dubai, UAE
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- ONLINE -->
+
+            <section class="sidebar-section">
+
+                <h2 class="sidebar-title">
+                    Online
+                </h2>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">↗</span>
+
+                    <a href="https://rawat-portfolio.vercel.app" target="_blank">
+                        Portfolio
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">in</span>
+
+                    <a href="https://linkedin.com/in/ashish-rawat-a468672b2" target="_blank">
+                        LinkedIn
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-icon">GH</span>
+
+                    <a href="https://github.com/ashishrawat008575" target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- EDUCATION -->
+
+            <section class="sidebar-section">
+
+                <h2 class="sidebar-title">
+                    Education
+                </h2>
+
+
+                <div class="education">
+
+                    <strong>
+                        Bachelor of Science
+                    </strong>
+
+                    <span>
+                        Sridev Suman University
+                    </span>
+
+                    <span class="date">
+                        Sept 2021 – Feb 2024
+                    </span>
+
+                </div>
+
+
+                <div class="education">
+
+                    <strong>
+                        Dr. P.D.B.H. Government
+                        Post Graduate College
+                    </strong>
+
+                    <span>
+                        Kotdwar, Uttarakhand
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- CORE SKILLS -->
+
+            <section class="sidebar-section">
+
+                <h2 class="sidebar-title">
+                    Core Skills
+                </h2>
+
+
+                <ul class="sidebar-list">
+
+                    <li>Frontend Development</li>
+
+                    <li>Responsive Web Design</li>
+
+                    <li>UI Development</li>
+
+                    <li>Reusable Components</li>
+
+                    <li>Cross-Browser Compatibility</li>
+
+                    <li>Git & GitHub</li>
+
+                    <li>Web Deployment</li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- LANGUAGES -->
+
+            <section class="sidebar-section">
+
+                <h2 class="sidebar-title">
+                    Languages
+                </h2>
+
+
+                <ul class="sidebar-list">
+
+                    <li>English</li>
+
+                    <li>Hindi</li>
+
+                </ul>
+
+            </section>
+
+
+        </aside>
+
+
+
+        <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+        <main class="main">
+
+
+            <!-- HEADER -->
+
+            <header class="header">
+
+                <h1 class="name">
+                    Ashish Singh Rawat
+                </h1>
+
+                <div class="designation">
+                    Frontend Developer
+                </div>
+
+                <div class="location">
+                    Dubai, UAE &nbsp; | &nbsp;
+                    Open to Frontend Developer Opportunities
+                </div>
+
+            </header>
+
+
+
+            <!-- PROFESSIONAL SUMMARY -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    Professional Summary
+                </h2>
+
+
+                <p class="summary">
+
+                    Frontend Developer with 1+ year of professional experience
+                    creating responsive, user-focused web interfaces using
+                    HTML5, CSS3, JavaScript, React.js, Bootstrap, Tailwind CSS,
+                    and Material UI. Experienced in building reusable UI
+                    components, responsive websites, Git-based workflows,
+                    and production deployments using Vercel. Also skilled in
+                    WordPress, Shopify, Photoshop, and Figma-to-HTML
+                    implementation. Currently based in Dubai and seeking a
+                    Frontend Developer opportunity to contribute to modern
+                    web projects and grow within a professional development team.
+
+                </p>
+
+            </section>
+
+
+
+            <!-- PROFESSIONAL EXPERIENCE -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    Professional Experience
+                </h2>
+
+
+                <div class="timeline">
+
+
+                    <!-- CURRENT JOB -->
+
+                    <article class="experience">
+
+                        <div class="experience-top">
+
+                            <div>
+
+                                <div class="job-title">
+                                    Production Operator
+                                </div>
+
+                                <div class="company">
+                                    Wonderbee Ice Cream | Dubai, UAE
+                                </div>
+
+                            </div>
+
+                            <div class="date">
+                                Feb 2026 – Present
+                            </div>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                Manage daily production operations while
+                                maintaining required quality and safety standards.
+                            </li>
+
+                            <li>
+                                Monitor production processes to support smooth
+                                and efficient workflow.
+                            </li>
+
+                            <li>
+                                Maintain cleanliness, organization, and compliance
+                                with workplace procedures.
+                            </li>
+
+                            <li>
+                                Collaborate with team members to achieve daily
+                                production targets and maintain consistent quality.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- MANTRIN -->
+
+                    <article class="experience">
+
+                        <div class="experience-top">
+
+                            <div>
+
+                                <div class="job-title">
+                                    Frontend Developer
+                                </div>
+
+                                <div class="company">
+                                    Mantrin
+                                </div>
+
+                            </div>
+
+                            <div class="date">
+                                June 2025 – Feb 2026
+                            </div>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                Developed responsive web interfaces using
+                                React.js, Tailwind CSS, and Bootstrap.
+                            </li>
+
+                            <li>
+                                Built reusable UI components and responsive
+                                layouts for desktop, tablet, and mobile devices.
+                            </li>
+
+                            <li>
+                                Collaborated with team members to improve
+                                UI/UX, usability, and website performance.
+                            </li>
+
+                            <li>
+                                Converted design requirements into clean,
+                                responsive frontend interfaces.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- JURISNEXA -->
+
+                    <article class="experience">
+
+                        <div class="experience-top">
+
+                            <div>
+
+                                <div class="job-title">
+                                    Frontend Developer
+                                </div>
+
+                                <div class="company">
+                                    JurisNexa
+                                </div>
+
+                            </div>
+
+                            <div class="date">
+                                Jan 2025 – June 2025
+                            </div>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                Built responsive websites using HTML5, CSS3,
+                                JavaScript, React.js, Tailwind CSS, Bootstrap,
+                                and Material UI.
+                            </li>
+
+                            <li>
+                                Developed reusable interface components based
+                                on project requirements and design specifications.
+                            </li>
+
+                            <li>
+                                Used Git and GitHub for source control and
+                                collaborative development.
+                            </li>
+
+                            <li>
+                                Deployed completed projects through Vercel
+                                and ensured cross-device responsiveness.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+
+                    <!-- ASSOCIATE EXECUTIVE -->
+
+                    <article class="experience">
+
+                        <div class="experience-top">
+
+                            <div>
+
+                                <div class="job-title">
+                                    Associate Executive
+                                </div>
+
+                                <div class="company">
+                                    Vishlave TrainingProtect IT Solutions Ltd
+                                </div>
+
+                            </div>
+
+                            <div class="date">
+                                Nov 2023 – Nov 2024
+                            </div>
+
+                        </div>
+
+
+                        <ul>
+
+                            <li>
+                                Managed client communication for IT training
+                                services and coordinated customer requirements.
+                            </li>
+
+                            <li>
+                                Coordinated with developers to communicate
+                                UI requirements and support improvements
+                                to customer experience.
+                            </li>
+
+                            <li>
+                                Developed strong communication, coordination,
+                                and client-handling skills.
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- TECHNICAL SKILLS -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    Technical Skills
+                </h2>
+
+
+                <div class="skills">
+
+
+                    <div class="skill">
+
+                        <strong>
+                            Frontend
+                        </strong>
+
+                        <span>
+                            HTML5 · CSS3 · JavaScript · React.js
+                        </span>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <strong>
+                            UI Frameworks
+                        </strong>
+
+                        <span>
+                            Bootstrap · Tailwind CSS · Material UI
+                        </span>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <strong>
+                            Responsive Design
+                        </strong>
+
+                        <span>
+                            Flexbox · CSS Grid · Media Queries
+                        </span>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <strong>
+                            CMS & E-Commerce
+                        </strong>
+
+                        <span>
+                            WordPress · Shopify
+                        </span>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <strong>
+                            Design Tools
+                        </strong>
+
+                        <span>
+                            Photoshop · Figma-to-HTML
+                        </span>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <strong>
+                            Version Control
+                        </strong>
+
+                        <span>
+                            Git · GitHub
+                        </span>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <strong>
+                            Deployment
+                        </strong>
+
+                        <span>
+                            Vercel · Netlify · GitHub Pages
+                        </span>
+
+                    </div>
+
+
+                    <div class="skill">
+
+                        <strong>
+                            Development
+                        </strong>
+
+                        <span>
+                            Reusable UI · Cross-Browser Compatibility
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CERTIFICATIONS -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    Certifications
+                </h2>
+
+
+                <div class="certifications">
+
+
+                    <div class="certificate">
+
+                        <div class="certificate-title">
+                            Front-End Developer Certification
+                        </div>
+
+                        <div class="certificate-source">
+                            Internshala
+                        </div>
+
+                    </div>
+
+
+                    <div class="certificate">
+
+                        <div class="certificate-title">
+                            Diploma in Computer Basics
+                        </div>
+
+                        <div class="certificate-source">
+                            Computer Fundamentals
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ONLINE PROFILES -->
+
+            <section class="section">
+
+                <h2 class="section-title">
+                    Online Profiles
+                </h2>
+
+
+                <div class="profiles">
+
+
+                    <div class="profile-link">
+
+                        <strong>Portfolio:</strong>
+
+                        <a href="https://rawat-portfolio.vercel.app" target="_blank">
+                            rawat-portfolio.vercel.app
+                        </a>
+
+                    </div>
+
+
+                    <div class="profile-link">
+
+                        <strong>LinkedIn:</strong>
+
+                        <a href="https://linkedin.com/in/ashish-rawat-a468672b2" target="_blank">
+                            linkedin.com/in/ashish-rawat-a468672b2
+                        </a>
+
+                    </div>
+
+
+                    <div class="profile-link">
+
+                        <strong>GitHub:</strong>
+
+                        <a href="https://github.com/ashishrawat008575" target="_blank">
+                            github.com/ashishrawat008575
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+</body>
+
+</html>
