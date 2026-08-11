@@ -1,13 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Ashish Singh Rawat | Frontend Developer</title>
 
     <style>
+        /* =====================================================
+           RESET
+        ===================================================== */
+
         * {
             margin: 0;
             padding: 0;
@@ -15,7 +19,12 @@
         }
 
         body {
-            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            font-family:
+                "Segoe UI",
+                Arial,
+                Helvetica,
+                sans-serif;
+
             background: #e9edf2;
             color: #303846;
             line-height: 1.4;
@@ -26,51 +35,47 @@
             text-decoration: none;
         }
 
-
-        /* =========================
+        /* =====================================================
            A4 RESUME
-        ========================= */
+        ===================================================== */
 
         .resume {
             width: 210mm;
             min-height: 297mm;
+
             margin: 25px auto;
+
             background: #ffffff;
 
             display: grid;
             grid-template-columns: 64mm 1fr;
 
             overflow: hidden;
-
-            border-radius: 0 32px 32px 0;
+            border-radius: 0;
 
             box-shadow:
                 0 18px 50px rgba(27, 38, 54, 0.14);
         }
 
-
-        /* =========================
-           SIDEBAR
-        ========================= */
+        /* =====================================================
+           LEFT SIDEBAR
+        ===================================================== */
 
         .sidebar {
             background: #303b4f;
             color: #ffffff;
 
             padding: 30px 22px;
-
             min-height: 297mm;
         }
 
-
-        /* =========================
+        /* =====================================================
            PROFILE IMAGE
-        ========================= */
+        ===================================================== */
 
         .profile {
             display: flex;
             justify-content: center;
-
             margin-bottom: 28px;
         }
 
@@ -88,17 +93,19 @@
                 0 5px 18px rgba(0, 0, 0, 0.18);
         }
 
-
-        /* =========================
+        /* =====================================================
            SIDEBAR SECTIONS
-        ========================= */
+        ===================================================== */
 
         .sidebar-section {
             margin-bottom: 26px;
         }
 
         .sidebar-title {
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
             font-size: 15px;
             font-weight: 700;
@@ -112,21 +119,18 @@
                 1px solid rgba(255, 255, 255, 0.5);
         }
 
-
-        /* =========================
+        /* =====================================================
            CONTACT
-        ========================= */
+        ===================================================== */
 
         .contact-item {
             display: flex;
             align-items: flex-start;
 
             gap: 8px;
-
             margin-bottom: 9px;
 
             font-size: 8.4px;
-
             line-height: 1.45;
 
             color: #eef1f5;
@@ -135,22 +139,100 @@
         }
 
         .contact-icon {
-            width: 13px;
-            min-width: 13px;
+            width: 15px;
+            min-width: 15px;
 
             text-align: center;
 
             font-size: 9px;
-
             color: #ffffff;
 
             font-weight: 600;
         }
 
+        /* =====================================================
+           ONLINE PROFILE LINKS
+        ===================================================== */
 
-        /* =========================
+        .online-profile-item {
+            display: flex;
+            align-items: flex-start;
+
+            gap: 8px;
+            margin-bottom: 10px;
+
+            font-size: 8px;
+            line-height: 1.45;
+
+            color: #eef1f5;
+
+            word-break: break-word;
+        }
+
+        .online-profile-icon {
+            width: 18px;
+            min-width: 18px;
+
+            height: 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #ffffff;
+
+            text-align: center;
+
+            flex-shrink: 0;
+        }
+
+        .online-profile-icon svg {
+            width: 13px;
+            height: 13px;
+
+            stroke: #ffffff;
+
+            stroke-width: 2;
+
+            fill: none;
+
+            display: block;
+        }
+
+        .online-profile-icon.text-icon {
+            font-size: 9px;
+            font-weight: 700;
+
+            line-height: 1;
+        }
+
+        .online-profile-content {
+            flex: 1;
+        }
+
+        .online-profile-label {
+            font-weight: 700;
+            color: #ffffff;
+
+            margin-right: 3px;
+        }
+
+        .online-profile-link {
+            color: #e3e7ed;
+
+            transition:
+                opacity 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .online-profile-link:hover {
+            opacity: 0.75;
+            color: #ffffff;
+        }
+
+        /* =====================================================
            EDUCATION
-        ========================= */
+        ===================================================== */
 
         .education {
             margin-bottom: 14px;
@@ -178,14 +260,12 @@
 
         .education .date {
             color: #ffffff;
-
             margin-top: 2px;
         }
 
-
-        /* =========================
+        /* =====================================================
            SIDEBAR LIST
-        ========================= */
+        ===================================================== */
 
         .sidebar-list {
             padding-left: 15px;
@@ -199,26 +279,28 @@
             margin-bottom: 6px;
         }
 
-
-        /* =========================
+        /* =====================================================
            MAIN CONTENT
-        ========================= */
+        ===================================================== */
 
         .main {
-            padding: 32px 28px 26px 28px;
+            padding:
+                32px 28px 26px 28px;
         }
 
-
-        /* =========================
+        /* =====================================================
            HEADER
-        ========================= */
+        ===================================================== */
 
         .header {
             margin-bottom: 23px;
         }
 
         .name {
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
             font-size: 30px;
 
@@ -253,17 +335,19 @@
             color: #697384;
         }
 
-
-        /* =========================
-           SECTIONS
-        ========================= */
+        /* =====================================================
+           SECTION
+        ===================================================== */
 
         .section {
             margin-bottom: 20px;
         }
 
         .section-title {
-            font-family: Georgia, "Times New Roman", serif;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
 
             font-size: 14px;
 
@@ -290,10 +374,9 @@
             flex: 1;
         }
 
-
-        /* =========================
-           SUMMARY
-        ========================= */
+        /* =====================================================
+           PROFESSIONAL SUMMARY
+        ===================================================== */
 
         .summary {
             font-size: 8.3px;
@@ -305,10 +388,9 @@
             text-align: justify;
         }
 
-
-        /* =========================
+        /* =====================================================
            EXPERIENCE TIMELINE
-        ========================= */
+        ===================================================== */
 
         .timeline {
             position: relative;
@@ -350,11 +432,13 @@
             position: absolute;
 
             width: 7px;
+
             height: 7px;
 
             background: #ffffff;
 
-            border: 2px solid #68717d;
+            border:
+                2px solid #68717d;
 
             border-radius: 50%;
 
@@ -413,15 +497,15 @@
             margin-bottom: 3px;
         }
 
-
-        /* =========================
+        /* =====================================================
            TECHNICAL SKILLS
-        ========================= */
+        ===================================================== */
 
         .skills {
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
             gap: 7px 14px;
         }
@@ -431,7 +515,8 @@
 
             background: #f5f6f8;
 
-            border-left: 3px solid #303b4f;
+            border-left:
+                3px solid #303b4f;
 
             border-radius: 2px;
         }
@@ -454,15 +539,15 @@
             line-height: 1.4;
         }
 
-
-        /* =========================
+        /* =====================================================
            CERTIFICATIONS
-        ========================= */
+        ===================================================== */
 
         .certifications {
             display: grid;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                1fr 1fr;
 
             gap: 10px;
         }
@@ -470,7 +555,8 @@
         .certificate {
             padding-left: 9px;
 
-            border-left: 3px solid #303b4f;
+            border-left:
+                3px solid #303b4f;
         }
 
         .certificate-title {
@@ -489,35 +575,9 @@
             margin-top: 2px;
         }
 
-
-        /* =========================
-           ONLINE PROFILES
-        ========================= */
-
-        .profiles {
-            display: grid;
-
-            grid-template-columns: 1fr 1fr;
-
-            gap: 7px 12px;
-        }
-
-        .profile-link {
-            font-size: 7.7px;
-
-            color: #535c68;
-
-            word-break: break-all;
-        }
-
-        .profile-link strong {
-            color: #303b4f;
-        }
-
-
-        /* =========================
+        /* =====================================================
            PRINT
-        ========================= */
+        ===================================================== */
 
         @page {
             size: A4;
@@ -529,9 +589,11 @@
             html,
             body {
                 width: 210mm;
+
                 height: 297mm;
 
                 margin: 0;
+
                 padding: 0;
 
                 background: #ffffff;
@@ -539,6 +601,7 @@
 
             .resume {
                 width: 210mm;
+
                 min-height: 297mm;
 
                 margin: 0;
@@ -549,15 +612,17 @@
             }
 
             * {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
+                -webkit-print-color-adjust:
+                    exact !important;
+
+                print-color-adjust:
+                    exact !important;
             }
         }
 
-
-        /* =========================
+        /* =====================================================
            RESPONSIVE
-        ========================= */
+        ===================================================== */
 
         @media screen and (max-width: 850px) {
 
@@ -568,12 +633,12 @@
             .resume {
                 width: 100%;
 
-                grid-template-columns: 210px 1fr;
+                grid-template-columns:
+                    210px 1fr;
 
                 margin: 0;
             }
         }
-
 
         @media screen and (max-width: 650px) {
 
@@ -592,8 +657,7 @@
             }
 
             .skills,
-            .certifications,
-            .profiles {
+            .certifications {
                 grid-template-columns: 1fr;
             }
 
@@ -609,19 +673,15 @@
 
 </head>
 
-
 <body>
-
 
     <div class="resume">
 
-
         <!-- =====================================================
-         LEFT SIDEBAR
-    ====================================================== -->
+             LEFT SIDEBAR
+        ===================================================== -->
 
         <aside class="sidebar">
-
 
             <!-- PROFILE PHOTO -->
 
@@ -640,10 +700,11 @@
                     Contact
                 </h2>
 
-
                 <div class="contact-item">
 
-                    <span class="contact-icon">☎</span>
+                    <span class="contact-icon">
+                        ☎
+                    </span>
 
                     <span>
                         +971 56 769 6582
@@ -654,7 +715,9 @@
 
                 <div class="contact-item">
 
-                    <span class="contact-icon">@</span>
+                    <span class="contact-icon">
+                        @
+                    </span>
 
                     <span>
                         ashishrawat008575@gmail.com
@@ -665,7 +728,9 @@
 
                 <div class="contact-item">
 
-                    <span class="contact-icon">●</span>
+                    <span class="contact-icon">
+                        ●
+                    </span>
 
                     <span>
                         Dubai, UAE
@@ -676,44 +741,99 @@
             </section>
 
 
-            <!-- ONLINE -->
+            <!-- =================================================
+                 ONLINE PROFILES
+            ================================================== -->
 
             <section class="sidebar-section">
 
                 <h2 class="sidebar-title">
-                    Online
+                    Online Profiles
                 </h2>
 
 
-                <div class="contact-item">
+                <!-- PORTFOLIO -->
 
-                    <span class="contact-icon">↗</span>
+                <div class="online-profile-item">
 
-                    <a href="https://rawat-portfolio.vercel.app" target="_blank">
-                        Portfolio
-                    </a>
+                    <span class="online-profile-icon text-icon">
+                        ↗
+                    </span>
+
+                    <div class="online-profile-content">
+
+                        <span class="online-profile-label">
+                            Portfolio:
+                        </span>
+
+                        <a class="online-profile-link" href="https://rawat-portfolio.vercel.app/" target="_blank"
+                            rel="noopener noreferrer">
+                            rawat-portfolio.vercel.app
+                        </a>
+
+                    </div>
 
                 </div>
 
 
-                <div class="contact-item">
+                <!-- LINKEDIN -->
 
-                    <span class="contact-icon">in</span>
+                <div class="online-profile-item">
 
-                    <a href="https://linkedin.com/in/ashish-rawat-a468672b2" target="_blank">
-                        LinkedIn
-                    </a>
+                    <span class="online-profile-icon text-icon">
+                        in
+                    </span>
+
+                    <div class="online-profile-content">
+
+                        <span class="online-profile-label">
+                            LinkedIn:
+                        </span>
+
+                        <a class="online-profile-link" href="https://linkedin.com/in/ashish-rawat-a468672b2"
+                            target="_blank" rel="noopener noreferrer">
+                            linkedin.com/in/ashish-rawat-a468672b2
+                        </a>
+
+                    </div>
 
                 </div>
 
 
-                <div class="contact-item">
+                <!-- GITHUB / GLOBE ICON -->
 
-                    <span class="contact-icon">GH</span>
+                <div class="online-profile-item">
 
-                    <a href="https://github.com/ashishrawat008575" target="_blank">
-                        GitHub
-                    </a>
+                    <span class="online-profile-icon" aria-hidden="true">
+
+                        <!-- Clean White Globe SVG -->
+
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+                            <circle cx="12" cy="12" r="9" />
+
+                            <path d="M3 12h18" />
+
+                            <path d="M12 3c2.4 2.5 3.5 5.5 3.5 9s-1.1 6.5-3.5 9" />
+
+                            <path d="M12 3c-2.4 2.5-3.5 5.5-3.5 9s1.1 6.5 3.5 9" />
+
+                        </svg>
+
+                    </span>
+
+                    <div class="online-profile-content">
+
+                        <span class="online-profile-label">
+                            GitHub:
+                        </span>
+
+                        <a class="online-profile-link" href="https://github.com/ashishrawat008575" target="_blank"
+                            rel="noopener noreferrer">
+                            github.com/ashishrawat008575
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -773,19 +893,33 @@
 
                 <ul class="sidebar-list">
 
-                    <li>Frontend Development</li>
+                    <li>
+                        Frontend Development
+                    </li>
 
-                    <li>Responsive Web Design</li>
+                    <li>
+                        Responsive Web Design
+                    </li>
 
-                    <li>UI Development</li>
+                    <li>
+                        UI Development
+                    </li>
 
-                    <li>Reusable Components</li>
+                    <li>
+                        Reusable Components
+                    </li>
 
-                    <li>Cross-Browser Compatibility</li>
+                    <li>
+                        Cross-Browser Compatibility
+                    </li>
 
-                    <li>Git & GitHub</li>
+                    <li>
+                        Git & GitHub
+                    </li>
 
-                    <li>Web Deployment</li>
+                    <li>
+                        Web Deployment
+                    </li>
 
                 </ul>
 
@@ -803,22 +937,24 @@
 
                 <ul class="sidebar-list">
 
-                    <li>English</li>
+                    <li>
+                        English
+                    </li>
 
-                    <li>Hindi</li>
+                    <li>
+                        Hindi
+                    </li>
 
                 </ul>
 
             </section>
 
-
         </aside>
 
 
-
         <!-- =====================================================
-         MAIN CONTENT
-    ====================================================== -->
+             MAIN CONTENT
+        ===================================================== -->
 
         <main class="main">
 
@@ -831,9 +967,11 @@
                     Ashish Singh Rawat
                 </h1>
 
+
                 <div class="designation">
                     Frontend Developer
                 </div>
+
 
                 <div class="location">
                     Dubai, UAE &nbsp; | &nbsp;
@@ -841,7 +979,6 @@
                 </div>
 
             </header>
-
 
 
             <!-- PROFESSIONAL SUMMARY -->
@@ -871,7 +1008,6 @@
             </section>
 
 
-
             <!-- PROFESSIONAL EXPERIENCE -->
 
             <section class="section">
@@ -884,7 +1020,7 @@
                 <div class="timeline">
 
 
-                    <!-- CURRENT JOB -->
+                    <!-- WONDERBEE -->
 
                     <article class="experience">
 
@@ -901,6 +1037,7 @@
                                 </div>
 
                             </div>
+
 
                             <div class="date">
                                 Feb 2026 – Present
@@ -936,7 +1073,6 @@
                     </article>
 
 
-
                     <!-- MANTRIN -->
 
                     <article class="experience">
@@ -954,6 +1090,7 @@
                                 </div>
 
                             </div>
+
 
                             <div class="date">
                                 June 2025 – Feb 2026
@@ -989,7 +1126,6 @@
                     </article>
 
 
-
                     <!-- JURISNEXA -->
 
                     <article class="experience">
@@ -1007,6 +1143,7 @@
                                 </div>
 
                             </div>
+
 
                             <div class="date">
                                 Jan 2025 – June 2025
@@ -1043,8 +1180,7 @@
                     </article>
 
 
-
-                    <!-- ASSOCIATE EXECUTIVE -->
+                    <!-- VISH LAVE -->
 
                     <article class="experience">
 
@@ -1061,6 +1197,7 @@
                                 </div>
 
                             </div>
+
 
                             <div class="date">
                                 Nov 2023 – Nov 2024
@@ -1091,11 +1228,9 @@
 
                     </article>
 
-
                 </div>
 
             </section>
-
 
 
             <!-- TECHNICAL SKILLS -->
@@ -1213,11 +1348,9 @@
 
                     </div>
 
-
                 </div>
 
             </section>
-
 
 
             <!-- CERTIFICATIONS -->
@@ -1257,67 +1390,13 @@
 
                     </div>
 
-
                 </div>
 
             </section>
-
-
-
-            <!-- ONLINE PROFILES -->
-
-            <section class="section">
-
-                <h2 class="section-title">
-                    Online Profiles
-                </h2>
-
-
-                <div class="profiles">
-
-
-                    <div class="profile-link">
-
-                        <strong>Portfolio:</strong>
-
-                        <a href="https://rawat-portfolio.vercel.app" target="_blank">
-                            rawat-portfolio.vercel.app
-                        </a>
-
-                    </div>
-
-
-                    <div class="profile-link">
-
-                        <strong>LinkedIn:</strong>
-
-                        <a href="https://linkedin.com/in/ashish-rawat-a468672b2" target="_blank">
-                            linkedin.com/in/ashish-rawat-a468672b2
-                        </a>
-
-                    </div>
-
-
-                    <div class="profile-link">
-
-                        <strong>GitHub:</strong>
-
-                        <a href="https://github.com/ashishrawat008575" target="_blank">
-                            github.com/ashishrawat008575
-                        </a>
-
-                    </div>
-
-
-                </div>
-
-            </section>
-
 
         </main>
 
     </div>
-
 
 </body>
 
